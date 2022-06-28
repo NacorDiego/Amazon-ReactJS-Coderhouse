@@ -1,9 +1,9 @@
-import Button from "./components/Button";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
-    <div className="container mx-auto mt-5">
-      <Button name="Click aqui"/>
+    <div >
+      <NavBar />
     </div>
   );
 }

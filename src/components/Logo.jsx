@@ -1,6 +1,6 @@
 function Logo( {ruta} ) {
     return (
-        <img src={ruta} alt="Logo" />
+        <img className="w-28" src={ruta} alt="Logo" />
     );
 }
 

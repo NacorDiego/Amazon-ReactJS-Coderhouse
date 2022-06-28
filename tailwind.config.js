@@ -4,16 +4,30 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     colors: {
-      transparente: 'transparent',
+      transparent: 'transparent',
       current: 'currentColor',
-      blanco: colors.white,
-      primario: {
-        light: '#FFB700',
+      white: colors.white,
+      gray: colors.gray,
+      yellow: {
+        100: '#FFB100',
         DEFAULT: '#FF9900',
-        dark: '#F79400'},
-      detalle: '#00A8E1',
-      oscuro: '#141B24',
-      claro: '#EEF3F9'
+        500: '#F08000'},
+      sky: {
+        100 : '#00BFFF',
+        DEFAULT : '#00A8E1',
+        500 : '#0099CC',
+      },
+      blue: {
+        100 : '#88B6F2',
+        300 : '#6B90BF',
+        500 : '#4F698C',
+        700 : '#324359',
+        900 : '#151D26',
+      },
+      light: {
+        100 : '#EEF3F9',
+        300 : '#D0D4D9'
+      }
     },
     extend: {},
   },
