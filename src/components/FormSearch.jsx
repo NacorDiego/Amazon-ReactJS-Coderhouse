@@ -3,7 +3,7 @@
 
 function FormSearch() {
     return (
-        <form className="w-96">
+        <form className="w-1/2">
             <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Search</label>
             <div className="relative">
                 <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
