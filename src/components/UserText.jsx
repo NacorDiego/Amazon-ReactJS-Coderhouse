@@ -4,7 +4,7 @@ function UserText({nombre}) {
     return (
         <div className="flex flex-col justify-center items-start">
             <span className="text-white text-sm">Bienvenido, {nombre}</span>
-            <span className="text-white font-semibold">Cuenta y configuración <FontAwesomeIcon icon={faAngleDown} /></span>
+            <span className="text-white font-semibold">Cuenta y Listas <FontAwesomeIcon icon={faAngleDown} /></span>
         </div>
     );
 }
