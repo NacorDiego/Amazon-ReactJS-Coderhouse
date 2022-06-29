@@ -3,6 +3,15 @@ const colors = require('tailwindcss/colors')/** @type {import('tailwindcss').Con
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    container: {
+      padding: {
+        DEFAULT: '1rem',
+        sm: '2rem',
+        lg: '4rem',
+        xl: '5rem',
+        '2xl': '6rem',
+      }
+    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
