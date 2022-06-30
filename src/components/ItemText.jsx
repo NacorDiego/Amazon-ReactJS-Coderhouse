@@ -1,4 +1,4 @@
-function ProductCardText({ categoria, marca, stock, precio, modelo }) {
+function ItemText({ categoria, marca, stock, precio, modelo }) {
     return (
         <div className="w-full flex flex-col justify-center items-center gap-3">
             <span className="text-xl font-medium">{categoria} {marca} {modelo}</span>
@@ -8,4 +8,4 @@ function ProductCardText({ categoria, marca, stock, precio, modelo }) {
     );
 }
 
-export default ProductCardText;
+export default ItemText;

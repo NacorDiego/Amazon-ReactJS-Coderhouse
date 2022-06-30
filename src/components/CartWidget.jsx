@@ -4,7 +4,7 @@ import {faCartShopping} from '@fortawesome/free-solid-svg-icons';
 function CartWidget() {
     return (
         <button className="flex items-center">
-            <FontAwesomeIcon className="text-2xl text-white" icon={faCartShopping} />
+            <FontAwesomeIcon className="text-2xl text-white hover:text-light-300 ease-linear duration-200" icon={faCartShopping} />
         </button>
     );
 }
