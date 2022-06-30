@@ -1,0 +1,135 @@
+[
+
+    {
+
+        "id" : "1",
+        "marca" : "JBL",
+        "modelo" : "Tune 510BT",
+        "categoria" : "Auricular",
+        "subcategoria" : "Bluetooth",
+        "precio" : "14598.00",
+        "img" : "./assets/imgs/jbl-tune-500.png",
+        "stock" : "14"
+
+    },
+    {
+
+        "id" : "2",
+        "marca" : "Samsung",
+        "modelo" : "F24T35",
+        "categoria" : "Monitor",
+        "subcategoria" : "De oficina",
+        "precio" : "41999.00",
+        "img" : "./assets/imgs/samsung-F24T35.webp",
+        "stock" : "6",
+        "detalles" : {
+            "pulgadas" : "24",
+            "refresco" : "75hz",
+            "respuesta" : "4ms",
+            "panel" : "LED"
+        }
+
+    },
+    {
+
+        "id" : "3",
+        "marca" : "Benq Zowie",
+        "modelo" : "Xl2731k",
+        "categoria" : "Monitor",
+        "subcategoria" : "Gamer",
+        "precio" : "119999.00",
+        "img" : "./assets/imgs/benq-zowie-Xl2731k.webp",
+        "stock" : "5",
+        "detalles" : {
+            "pulgadas" : "27",
+            "refresco" : "165hz",
+            "respuesta" : "1ms",
+            "panel" : "LED"
+        }
+
+    },
+    {
+
+        "id" : "4",
+        "marca" : "Logitech",
+        "modelo" : "G305",
+        "categoria" : "Mouse",
+        "subcategoria" : "Inalámbrico",
+        "precio" : "5590.00",
+        "img" : "./assets/imgs/logitech-g-305.webp",
+        "stock" : "16",
+        "detalles" : {
+            "botones" : "6",
+            "resolución" : "12000dpi",
+            "sensor" : "óptico"
+        }
+
+    },
+    {
+
+        "id" : "5",
+        "marca" : "Genius",
+        "modelo" : "DX-110",
+        "categoria" : "Mouse",
+        "subcategoria" : "Cableado",
+        "precio" : "428.00",
+        "img" : "./assets/imgs/genius-dx-110.webp",
+        "stock" : "59",
+        "detalles" : {
+            "botones" : "3",
+            "resolución" : "1000dpi",
+            "sensor" : "óptico"
+        }
+
+    },
+    {
+
+        "id" : "6",
+        "marca" : "Gamma",
+        "modelo" : "G1904",
+        "categoria" : "Taladro",
+        "subcategoria" : "Eléctrico",
+        "precio" : "5989.00",
+        "img" : "./assets/imgs/gamma-G1904.webp",
+        "stock" : "7",
+        "detalles" : {
+            "frecuencia" : "50Hz",
+            "velocidad" : "2900rpm",
+            "funciones" : "reversa, percutor, destornillador"
+        }
+
+    },
+    {
+
+        "id" : "7",
+        "marca" : "Ferrolux",
+        "modelo" : "E27",
+        "categoria" : "Velador",
+        "subcategoria" : "De pie",
+        "precio" : "2297.00",
+        "img" : "./assets/imgs/ferrolux-E27.webp",
+        "stock" : "19",
+        "detalles" : {
+            "conexión" : "220v",
+            "material" : "metal"
+        }
+
+    },
+    {
+
+        "id" : "8",
+        "marca" : "Nike",
+        "modelo" : "Vapor 14 Academy",
+        "categoria" : "Botín",
+        "subcategoria" : "Futbol 5",
+        "precio" : "19999.00",
+        "img" : "./assets/imgs/nike-vapor-14-academy.webp",
+        "stock" : "8",
+        "detalles" : {
+            "material" : "cuero",
+            "suela" : "velocidad"
+        }
+
+    }
+
+]
