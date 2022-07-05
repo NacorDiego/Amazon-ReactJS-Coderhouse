@@ -9,7 +9,8 @@
         "subcategoria" : "Bluetooth",
         "precio" : "14598.00",
         "img" : "./assets/imgs/jbl-tune-500.png",
-        "stock" : "14"
+        "stock" : "14",
+        "descripcion" : "En la calle, en el colectivo o en la oficina, tené siempre a mano tu auricular JBL y ¡escapate de la rutina por un rato! Vas a poder disfrutar de la música que más te gusta y recibir llamadas telefónicas claras donde sea que te encuentres, sin perder contacto con el entorno."
 
     },
     {
@@ -22,12 +23,7 @@
         "precio" : "41999.00",
         "img" : "./assets/imgs/samsung-F24T35.webp",
         "stock" : "6",
-        "detalles" : {
-            "pulgadas" : "24",
-            "refresco" : "75hz",
-            "respuesta" : "4ms",
-            "panel" : "LED"
-        }
+        "descripcion" : "Samsung está fielmente comprometida en brindar productos de calidad y que contribuyan a crear un mejor futuro para las personas. Como empresa líder en la industria tecnológica uno de sus objetivos principales es desarrollar avanzadas e innovadoras soluciones. Es por ello que con este monitor tendrás y disfrutarás de una gran experiencia visual en todo momento."
 
     },
     {
@@ -40,12 +36,7 @@
         "precio" : "119999.00",
         "img" : "./assets/imgs/benq-zowie-Xl2731k.webp",
         "stock" : "5",
-        "detalles" : {
-            "pulgadas" : "27",
-            "refresco" : "165hz",
-            "respuesta" : "1ms",
-            "panel" : "LED"
-        }
+        "descripcion" : "Captura cada detalle del movimiento y disfruta del juego más fluido para un control más suave y preciso en el juego con el monitor ZOWIE con una frecuencia de actualización de hasta 165Hz."
 
     },
     {
@@ -58,11 +49,7 @@
         "precio" : "5590.00",
         "img" : "./assets/imgs/logitech-g-305.webp",
         "stock" : "16",
-        "detalles" : {
-            "botones" : "6",
-            "resolución" : "12000dpi",
-            "sensor" : "óptico"
-        }
+        "descripcion" : "El sensor HERO de próxima generación del ratón inalámbrico para gaming G305 LIGHTSPEED ofrece un rendimiento de 12.000 dpi, mientras que la conectividad inalámbrica LIGHTSPEED proporciona una velocidad de respuesta superrápida de 1 ms."
 
     },
     {
@@ -75,11 +62,7 @@
         "precio" : "428.00",
         "img" : "./assets/imgs/genius-dx-110.webp",
         "stock" : "59",
-        "detalles" : {
-            "botones" : "3",
-            "resolución" : "1000dpi",
-            "sensor" : "óptico"
-        }
+        "descripcion" : "Desde hace más de 30 años, Genius está enfocado en la calidad, comodidad y facilidad de uso de sus productos. Su principal objetivo es proporcionarle a las personas una mejor experiencia de usuario. Además, busca incorporar diseños ecológicos que respeten el medio ambiente. El mouse Genius se caracteriza por suaves curvas que resultan cómodas para cualquier mano."
 
     },
     {
@@ -92,11 +75,7 @@
         "precio" : "5989.00",
         "img" : "./assets/imgs/gamma-G1904.webp",
         "stock" : "7",
-        "detalles" : {
-            "frecuencia" : "50Hz",
-            "velocidad" : "2900rpm",
-            "funciones" : "reversa, percutor, destornillador"
-        }
+        "descripcion" : "Gamma es sinónimo de diseño, calidad y fortaleza. Desde su creación hasta la fecha el continuo crecimiento de la compañía estuvo dado por la especialización, profesionalidad, continua reinversión y desarrollo de nuevos productos que satisfagan a los consumidores de todo el país. Con los taladros Gamma podrás perforar, taladrar o percutir distintos tipos de materiales. Con un diseño liviano y compacto esta es la herramienta que estabas buscando para encarar tareas en tu hogar o en el ámbito profesional."
 
     },
     {
@@ -109,10 +88,7 @@
         "precio" : "2297.00",
         "img" : "./assets/imgs/ferrolux-E27.webp",
         "stock" : "19",
-        "detalles" : {
-            "conexión" : "220v",
-            "material" : "metal"
-        }
+        "descripcion" : "Lampara Velador Escritorio Ferrolux Barral U Metal Imola E27. Disponible en blanco y negro.Diseño minimalista e ideal para iluminar tus mesas de estudio, mesas de luz, escritorios."
 
     },
     {
@@ -125,10 +101,7 @@
         "precio" : "19999.00",
         "img" : "./assets/imgs/nike-vapor-14-academy.webp",
         "stock" : "8",
-        "detalles" : {
-            "material" : "cuero",
-            "suela" : "velocidad"
-        }
+        "descripcion" : "Modernos, ligeros y confiables; los Botines Nike Vapor 14 Academy Tf tienen todo lo necesario para que sientas como aumentas tu velocidad y la calidad de tu juego en cada partido. Su suela de goma está específicamente diseñada para el fútbol, brindando una tracción multidireccional superior, ideal para canchas de interior y exterior firmes."
 
     }
 
