@@ -1,10 +1,10 @@
 
-function ItemDetail({ producto }) {
+function ItemDetail({ ruta, producto }) {
     return (
         <>
             <div className="w-1/2 flex items-center">
                 <div className="w-10/12 p-5 rounded-full bg-light-100 hover:bg-sky-100 hover:shadow-lg hover:shadow-sky-500/40 hover:scale-105 ease-linear duration-200 hover:ease-linear hover:duration-200">
-                    <img className="rounded-xl" src={`.${producto.img}`} alt="imagen" />
+                    <img className="rounded-xl" src={`${ruta}${producto.img}`} alt="imagen" />
                 </div>
             </div>
             <div className="w-1/2 flex flex-col justify-center">
