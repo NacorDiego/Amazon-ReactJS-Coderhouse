@@ -6,18 +6,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from "react-router-dom";
 function ItemDetailContainer() {
     const [producto, setProducto] = useState()
-    // const [isLoading, setIsLoading] = useState(false)
     const { itemid } = useParams();
     useEffect ( () => {
         setTimeout( () => {
             console.log("Entro al timeOut")
-            // setIsLoading(true)
             fetch ('../data/products.json')
                 .then(resp => resp.json())
-                // .then(data => setProductos(data))
                 .then(data => setProducto(data.find((item) => item.id === itemid)))
                 .catch(err => console.log(err))
-                // .finally(setIsLoading(false))
         },1000)
     },[]);
 
