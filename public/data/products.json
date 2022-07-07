@@ -5,10 +5,9 @@
         "id" : "1",
         "marca" : "JBL",
         "modelo" : "Tune 510BT",
-        "categoria" : "Auricular",
-        "subcategoria" : "Bluetooth",
+        "categoria" : "A",
         "precio" : "14598.00",
-        "img" : "./assets/imgs/jbl-tune-500.png",
+        "img" : "/assets/imgs/jbl-tune-500.png",
         "stock" : "14",
         "descripcion" : "En la calle, en el colectivo o en la oficina, tené siempre a mano tu auricular JBL y ¡escapate de la rutina por un rato! Vas a poder disfrutar de la música que más te gusta y recibir llamadas telefónicas claras donde sea que te encuentres, sin perder contacto con el entorno."
 
@@ -18,10 +17,9 @@
         "id" : "2",
         "marca" : "Samsung",
         "modelo" : "F24T35",
-        "categoria" : "Monitor",
-        "subcategoria" : "De oficina",
+        "categoria" : "A",
         "precio" : "41999.00",
-        "img" : "./assets/imgs/samsung-F24T35.webp",
+        "img" : "/assets/imgs/samsung-F24T35.webp",
         "stock" : "6",
         "descripcion" : "Samsung está fielmente comprometida en brindar productos de calidad y que contribuyan a crear un mejor futuro para las personas. Como empresa líder en la industria tecnológica uno de sus objetivos principales es desarrollar avanzadas e innovadoras soluciones. Es por ello que con este monitor tendrás y disfrutarás de una gran experiencia visual en todo momento."
 
@@ -31,10 +29,9 @@
         "id" : "3",
         "marca" : "Benq Zowie",
         "modelo" : "Xl2731k",
-        "categoria" : "Monitor",
-        "subcategoria" : "Gamer",
+        "categoria" : "A",
         "precio" : "119999.00",
-        "img" : "./assets/imgs/benq-zowie-Xl2731k.webp",
+        "img" : "/assets/imgs/benq-zowie-Xl2731k.webp",
         "stock" : "5",
         "descripcion" : "Captura cada detalle del movimiento y disfruta del juego más fluido para un control más suave y preciso en el juego con el monitor ZOWIE con una frecuencia de actualización de hasta 165Hz."
 
@@ -44,10 +41,9 @@
         "id" : "4",
         "marca" : "Logitech",
         "modelo" : "G305",
-        "categoria" : "Mouse",
-        "subcategoria" : "Inalámbrico",
+        "categoria" : "A",
         "precio" : "5590.00",
-        "img" : "./assets/imgs/logitech-g-305.webp",
+        "img" : "/assets/imgs/logitech-g-305.webp",
         "stock" : "16",
         "descripcion" : "El sensor HERO de próxima generación del ratón inalámbrico para gaming G305 LIGHTSPEED ofrece un rendimiento de 12.000 dpi, mientras que la conectividad inalámbrica LIGHTSPEED proporciona una velocidad de respuesta superrápida de 1 ms."
 
@@ -57,10 +53,9 @@
         "id" : "5",
         "marca" : "Genius",
         "modelo" : "DX-110",
-        "categoria" : "Mouse",
-        "subcategoria" : "Cableado",
+        "categoria" : "A",
         "precio" : "428.00",
-        "img" : "./assets/imgs/genius-dx-110.webp",
+        "img" : "/assets/imgs/genius-dx-110.webp",
         "stock" : "59",
         "descripcion" : "Desde hace más de 30 años, Genius está enfocado en la calidad, comodidad y facilidad de uso de sus productos. Su principal objetivo es proporcionarle a las personas una mejor experiencia de usuario. Además, busca incorporar diseños ecológicos que respeten el medio ambiente. El mouse Genius se caracteriza por suaves curvas que resultan cómodas para cualquier mano."
 
@@ -70,10 +65,9 @@
         "id" : "6",
         "marca" : "Gamma",
         "modelo" : "G1904",
-        "categoria" : "Taladro",
-        "subcategoria" : "Eléctrico",
+        "categoria" : "A",
         "precio" : "5989.00",
-        "img" : "./assets/imgs/gamma-G1904.webp",
+        "img" : "/assets/imgs/gamma-G1904.webp",
         "stock" : "7",
         "descripcion" : "Gamma es sinónimo de diseño, calidad y fortaleza. Desde su creación hasta la fecha el continuo crecimiento de la compañía estuvo dado por la especialización, profesionalidad, continua reinversión y desarrollo de nuevos productos que satisfagan a los consumidores de todo el país. Con los taladros Gamma podrás perforar, taladrar o percutir distintos tipos de materiales. Con un diseño liviano y compacto esta es la herramienta que estabas buscando para encarar tareas en tu hogar o en el ámbito profesional."
 
@@ -83,10 +77,9 @@
         "id" : "7",
         "marca" : "Ferrolux",
         "modelo" : "E27",
-        "categoria" : "Velador",
-        "subcategoria" : "De pie",
+        "categoria" : "A",
         "precio" : "2297.00",
-        "img" : "./assets/imgs/ferrolux-E27.webp",
+        "img" : "/assets/imgs/ferrolux-E27.webp",
         "stock" : "19",
         "descripcion" : "Lampara Velador Escritorio Ferrolux Barral U Metal Imola E27. Disponible en blanco y negro.Diseño minimalista e ideal para iluminar tus mesas de estudio, mesas de luz, escritorios."
 
@@ -96,10 +89,9 @@
         "id" : "8",
         "marca" : "Nike",
         "modelo" : "Vapor 14 Academy",
-        "categoria" : "Botín",
-        "subcategoria" : "Futbol 5",
+        "categoria" : "B",
         "precio" : "19999.00",
-        "img" : "./assets/imgs/nike-vapor-14-academy.webp",
+        "img" : "/assets/imgs/nike-vapor-14-academy.webp",
         "stock" : "8",
         "descripcion" : "Modernos, ligeros y confiables; los Botines Nike Vapor 14 Academy Tf tienen todo lo necesario para que sientas como aumentas tu velocidad y la calidad de tu juego en cada partido. Su suela de goma está específicamente diseñada para el fútbol, brindando una tracción multidireccional superior, ideal para canchas de interior y exterior firmes."
 
