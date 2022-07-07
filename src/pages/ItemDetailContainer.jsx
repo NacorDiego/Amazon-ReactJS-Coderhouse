@@ -4,24 +4,32 @@ import { useParams } from "react-router-dom";
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from "react-router-dom";
+import ItemDetailLoader from "../components/ItemDetailLoader";
 function ItemDetailContainer() {
     const [producto, setProducto] = useState()
+    const [loading, setLoading] = useState(true)
     const { itemid } = useParams();
     const [ruta, setRuta] = useState(".")
+
     useEffect(() => {
 
         itemid ? setRuta("..") : setRuta(".");
 
     }, [itemid])
+
     useEffect(() => {
 
         setTimeout(() => {
-            console.log("Entro al timeOut")
             fetch('../data/products.json')
                 .then(resp => resp.json())
                 .then(data => setProducto(data.find((item) => item.id === itemid)))
                 .catch(err => console.log(err))
+                setLoading(false)
         }, 1000)
+
+        return (
+            setLoading(true)
+        )
     }, []);
 
     return (
@@ -32,7 +40,7 @@ function ItemDetailContainer() {
                 </div>
                 <hr />
                 <div className="w-full h-4/6 p-10 mt-16 bg-white shadow-lg shadow-blue-900/30 rounded-3xl flex">
-                    {producto && <ItemDetail ruta={ruta} producto={producto} />}
+                    { loading ? <ItemDetailLoader /> : (producto && <ItemDetail ruta={ruta} producto={producto} />) }
                 </div>
             </div>
         </div>
