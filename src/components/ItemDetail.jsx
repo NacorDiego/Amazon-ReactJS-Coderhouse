@@ -1,4 +1,5 @@
-
+import ItemAddCart from "./ItemAddCart";
+import ItemCount from "./ItemCount";
 function ItemDetail({ ruta, producto }) {
     return (
         <>
@@ -7,14 +8,17 @@ function ItemDetail({ ruta, producto }) {
                     <img className="rounded-xl" src={`${ruta}${producto.img}`} alt="imagen" />
                 </div>
             </div>
-            <div className="w-1/2 flex flex-col justify-center">
-                <h1 className="mt-5 text-5xl text-blue-900">{producto.marca} {producto.modelo}</h1>
-                <div className="mt-10 flex items-center justify-between">
+            <div className="w-1/2 flex flex-col justify-center px-5">
+                <h1 className="mt-5 text-5xl text-blue-900 px-5">{producto.marca} {producto.modelo}</h1>
+                <div className="mt-10 flex items-center justify-between px-5">
                     <span className="text-blue-900 text-6xl font-medium">$ {producto.precio}</span>
                     <span className="text-xl text-sky-100 font-medium mr-16">En stock</span>
                 </div>
                 <div>
-                    <p className="mt-10 text-xl text-blue-900 opacity-80">{producto.descripcion}</p>
+                    <p className="mt-10 text-xl text-blue-900 opacity-80 px-5">{producto.descripcion}</p>
+                </div>
+                <div>
+                    <ItemAddCart stock={4} />
                 </div>
             </div>
         </>
