@@ -43,7 +43,7 @@
         "modelo" : "G305",
         "categoria" : "A",
         "precio" : "5590.00",
-        "img" : "/assets/imgs/logitech-g-305.webp",
+        "img" : "/assets/imgs/logitech-g-3052.webp",
         "stock" : "16",
         "descripcion" : "El sensor HERO de próxima generación del ratón inalámbrico para gaming G305 LIGHTSPEED ofrece un rendimiento de 12.000 dpi, mientras que la conectividad inalámbrica LIGHTSPEED proporciona una velocidad de respuesta superrápida de 1 ms."
 
@@ -94,6 +94,54 @@
         "img" : "/assets/imgs/nike-vapor-14-academy.webp",
         "stock" : "8",
         "descripcion" : "Modernos, ligeros y confiables; los Botines Nike Vapor 14 Academy Tf tienen todo lo necesario para que sientas como aumentas tu velocidad y la calidad de tu juego en cada partido. Su suela de goma está específicamente diseñada para el fútbol, brindando una tracción multidireccional superior, ideal para canchas de interior y exterior firmes."
+
+    },
+    {
+
+        "id" : "9",
+        "marca" : "Farenheite",
+        "modelo" : "Roux",
+        "categoria" : "B",
+        "precio" : "34999.00",
+        "img" : "/assets/imgs/farenheite-roux.webp",
+        "stock" : "3",
+        "descripcion" : "Campera importada Roux Farenheite hiper abrigrada negra con capucha fija rellana de pluma. Año lanzamiento 2022."
+
+    },
+    {
+
+        "id" : "10",
+        "marca" : "Mariani",
+        "modelo" : "Strongolo",
+        "categoria" : "B",
+        "precio" : "6499.00",
+        "img" : "/assets/imgs/mariani.webp",
+        "stock" : "7",
+        "descripcion" : "Esta mochila te acompaña para el día a día o una escapada de vacaciones. Es ideal ya que tiene la capacidad de guardado perfecto para nuestros esenciales."
+
+    },
+    {
+
+        "id" : "11",
+        "marca" : "Ray-Ban",
+        "modelo" : "Erika Classic",
+        "categoria" : "B",
+        "precio" : "18499.00",
+        "img" : "/assets/imgs/rayban-erika-classic.webp",
+        "stock" : "8",
+        "descripcion" : "Ray-Ban es una empresa con larga trayectoria en la industria óptica. Esta marca es reconocida a nivel internacional por la excelencia de sus productos en cuanto a calidad y diseño. Sin dudas, estos anteojos son una muy buena opción."
+
+    },
+    {
+
+        "id" : "12",
+        "marca" : "Ripcurl",
+        "modelo" : "TRK Routine",
+        "categoria" : "B",
+        "precio" : "4899.00",
+        "img" : "/assets/imgs/ripcurl-trk-routine.webp",
+        "stock" : "8",
+        "descripcion" : "Cap Rip Curl Trucker Routine con snap regulable. Parche bordado en frente."
 
     }
 
