@@ -20,7 +20,7 @@ function ItemDetailContainer() {
     useEffect(() => {
 
         setTimeout(() => {
-            fetch('../data/products.json')
+            fetch('/data/products.json')
                 .then(resp => resp.json())
                 .then(data => setProducto(data.find((item) => item.id === itemid)))
                 .catch(err => console.log(err))

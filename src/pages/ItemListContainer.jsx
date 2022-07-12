@@ -6,19 +6,12 @@ import { useParams } from 'react-router-dom';
 
 function ItemListContainer() {
     const [productos, setProductos] = useState([])
-    const [ruta, setRuta] = useState(".")
     const { catid } = useParams()
     console.log(catid)
 
     useEffect(() => {
-
-        catid ? setRuta("..") : setRuta(".");
-
-    }, [catid])
-
-    useEffect(() => {
         setTimeout(() => {
-            fetch(`${ruta}/data/products.json`)
+            fetch(`/data/products.json`)
                 .then(resp => resp.json())
                 .then(data => catid ? setProductos(data.filter((item) => item.categoria === catid)) : setProductos(data))
         }, 1000)
@@ -31,7 +24,7 @@ function ItemListContainer() {
                     <h1 className="text-3xl text-blue-900 font-medium">Catálogo de productos</h1>
                     <a className="text-xl text-sky-100 font-normal hover:text-sky" href="/">Ver más</a>
                 </div>
-                <ItemList ruta={ruta} productos={productos} />
+                <ItemList productos={productos} />
             </div>
         </section>
     );

@@ -6,7 +6,7 @@ function User({nombre}) {
     return (
         <Link to='/user/login'>
             <div className="flex flex-row justify-start items-center gap-4">
-                <UserImg ruta="./assets/imgs/userImg.jpg" />
+                <UserImg ruta="/assets/imgs/userImg.jpg" />
                 <UserText nombre={nombre} />
             </div>
         </Link>

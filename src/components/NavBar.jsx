@@ -10,7 +10,7 @@ function NavBar() {
     return (
         <nav className="h-20 w-full bg-blue-900 flex flex-row items-center justify-between px-5 shadow-lg shadow-blue-900/50">
             <div className="flex gap-x-10 items-center">
-                <Logo ruta="./assets/imgs/logo.svg" />
+                <Logo ruta="/assets/imgs/logo.svg" />
                 {/* <ButtonBars /> */}
                 <Categorys />
             </div>
