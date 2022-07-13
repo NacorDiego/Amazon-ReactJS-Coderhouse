@@ -1,17 +1,17 @@
-import { useState } from "react";
+// import { useState } from "react";
 
-function ItemCount({ stock }) {
-    const [num, setNum] = useState(1);
+function ItemCount({ num, sumar, restar, stock }) {
+    // const [num, setNum] = useState(1);
 
-    const sumar = () => {
-        setNum(num + 1)
-    }
+    // const sumar = () => {
+    //     setNum(num + 1)
+    // }
 
-    const restar = () => {
-        if (num > 1) {
-            setNum(num - 1)
-        }
-    }
+    // const restar = () => {
+    //     if (num > 1) {
+    //         setNum(num - 1)
+    //     }
+    // }
 
     let stockActual = stock - num;
 
