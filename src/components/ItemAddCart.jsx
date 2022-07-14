@@ -1,8 +1,31 @@
-// import { useState } from "react";
 import { Link } from "react-router-dom";
 import ButtonAddToCart from "./ButtonAddToCart";
 import ItemCount from "./ItemCount";
-function ItemAddCart({ onAdd, purchaseCompleted, num, sumar, restar, stock }) {
+import { useContext, useState } from "react";
+import CartContext from "../store/cart-context";
+function ItemAddCart({ producto, stock }) {
+
+    const { addToCart } = useContext(CartContext)
+
+    const [purchaseCompleted, setPurchaseCompleted] = useState(false)
+
+    const [num, setNum] = useState(1);
+
+    const sumar = () => {
+        setNum(num + 1)
+    }
+
+    const restar = () => {
+        if (num > 1) {
+            setNum(num - 1)
+        }
+    }
+
+    const onAdd = (num) => {
+        //? Recibe la cantidad que esta en itemcount y se la pasa a la función de addToCart
+        setPurchaseCompleted(true)
+        addToCart(producto, num)
+    }
 
     return (
         <>
