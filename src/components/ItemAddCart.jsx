@@ -21,9 +21,10 @@ function ItemAddCart({ producto, stock }) {
         }
     }
 
-    const onAdd = (num) => {
+    const onAdd = () => {
         //? Recibe la cantidad que esta en itemcount y se la pasa a la función de addToCart
         setPurchaseCompleted(true)
+        console.log('La cantidad del producto es: ' + num);
         addToCart(producto, num)
     }
 
@@ -36,7 +37,7 @@ function ItemAddCart({ producto, stock }) {
             ) : (
             <div className="w-full flex justify-between items-end px-5 mt-5">
                 <ItemCount num={num} sumar={sumar} restar={restar} stock={stock} />
-                <ButtonAddToCart onAdd={onAdd} />
+                <ButtonAddToCart num={num} onAdd={onAdd} />
             </div>
             )}
         </>

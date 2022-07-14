@@ -7,7 +7,6 @@ import { useParams } from 'react-router-dom';
 function ItemListContainer() {
     const [productos, setProductos] = useState([])
     const { catid } = useParams()
-    console.log(catid)
 
     useEffect(() => {
         setTimeout(() => {
@@ -15,7 +14,7 @@ function ItemListContainer() {
                 .then(resp => resp.json())
                 .then(data => catid ? setProductos(data.filter((item) => item.categoria === catid)) : setProductos(data))
         }, 1000)
-    })
+    }, [catid])
 
     return (
         <section className="bg-light-100 pt-32 min-h-screen pb-32">

@@ -1,5 +1,3 @@
-// import { useState } from "react";
-
 function ItemCount({ num, sumar, restar, stock }) {
 
     let stockActual = stock - num;

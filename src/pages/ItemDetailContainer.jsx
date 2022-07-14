@@ -9,13 +9,6 @@ function ItemDetailContainer() {
     const [producto, setProducto] = useState()
     const [loading, setLoading] = useState(true)
     const { itemid } = useParams();
-    const [ruta, setRuta] = useState(".")
-
-    useEffect(() => {
-
-        itemid ? setRuta("..") : setRuta(".");
-
-    }, [itemid])
 
     useEffect(() => {
 
@@ -25,12 +18,13 @@ function ItemDetailContainer() {
                 .then(data => setProducto(data.find((item) => item.id === itemid)))
                 .catch(err => console.log(err))
                 setLoading(false)
+                console.log(producto)
         }, 1000)
 
         return (
             setLoading(true)
         )
-    }, []);
+    }, [itemid]);
 
     return (
         <div className="h-screen bg-light-100">
@@ -40,7 +34,7 @@ function ItemDetailContainer() {
                 </div>
                 <hr />
                 <div className="w-full h-4/6 p-10 mt-16 bg-white shadow-lg shadow-blue-900/30 rounded-3xl flex">
-                    { loading ? <ItemDetailLoader /> : (producto && <ItemDetail ruta={ruta} producto={producto} />) }
+                    { loading ? <ItemDetailLoader /> : (producto && <ItemDetail producto={producto} />) }
                 </div>
             </div>
         </div>
