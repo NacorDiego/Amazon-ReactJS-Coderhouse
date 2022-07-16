@@ -8,7 +8,7 @@ import Categorys from "./Categorys";
 
 function NavBar() {
     return (
-        <nav className="h-20 w-full bg-blue-900 flex flex-row items-center justify-between px-5 shadow-lg shadow-blue-900/50">
+        <nav className="h-20 w-full bg-blue-900 fixed top-0 z-10 flex flex-row items-center justify-between px-5 shadow-lg shadow-blue-900/50">
             <div className="flex gap-x-10 items-center">
                 <Logo ruta="/assets/imgs/logo.svg" />
                 {/* <ButtonBars /> */}

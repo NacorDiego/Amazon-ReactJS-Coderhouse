@@ -2,7 +2,7 @@ import Item from "./Item";
 
 function ItemList({ productos }) {
     return (
-        <div className="w-full flex justify-start flex-wrap items-start gap-16">
+        <div className="flex justify-center flex-wrap items-start gap-24">
             {productos.map(
                 i => <Item producto={i} key={i.id} />
             )}
