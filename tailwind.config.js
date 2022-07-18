@@ -5,13 +5,20 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: {
-        DEFAULT: '0.25rem',
-        sm: '0.5rem',
-        md: '1rem',
-        lg: '2rem',
-        xl: '3rem',
-      }
+      // padding: {
+      //   DEFAULT: '0.25rem',
+      //   sm: '0rem',
+      //   md: '0rem',
+      //   lg: '0rem',
+      //   xl: '0rem',
+      // },
+      // margin: {
+      //   DEFAULT: '0rem',
+      //   sm: '0rem',
+      //   md: '0rem',
+      //   lg: '0rem',
+      //   xl: '0rem'
+      // }
     },
     colors: {
       transparent: 'transparent',

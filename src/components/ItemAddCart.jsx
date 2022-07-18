@@ -5,7 +5,7 @@ import { useContext, useState } from "react";
 import CartContext from "../store/cart-context";
 function ItemAddCart({ producto, stock }) {
 
-    const { addToCart, calculateTotalValue } = useContext(CartContext)
+    const { addToCart } = useContext(CartContext)
 
     const [purchaseCompleted, setPurchaseCompleted] = useState(false)
 
@@ -24,9 +24,8 @@ function ItemAddCart({ producto, stock }) {
     const onAdd = () => {
         //? Recibe la cantidad que esta en itemcount y se la pasa a la función de addToCart
         setPurchaseCompleted(true)
-        console.log('La cantidad del producto es: ' + num);
+        console.log(`Se agrega ${producto.marca} ${producto.modelo} al carrito ${num} veces.`)
         addToCart(producto, num)
-        calculateTotalValue(producto,num)
     }
 
     return (

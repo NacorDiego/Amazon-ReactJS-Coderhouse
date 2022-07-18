@@ -48,6 +48,7 @@ const CartProvider = ({children}) => {
     //? Esta función se llama cuando se presiona el bonton Agregar Carrito
     const addToCart = (producto, cantidad) => {
 
+        console.log('Se ejecuta la función addToCart')
         if (isInCart(producto.id)) { //Verifico si el producto existe en el carrito.
             const newCart = [...cart] //Hago copia del carrito con spread operator.
             for( const elemento of newCart) { //Busco cual producto del carrito coincide con el producto que estoy agregando.
@@ -92,7 +93,6 @@ const CartProvider = ({children}) => {
         }
 
     }
-
 
     const data = {
         cart,
