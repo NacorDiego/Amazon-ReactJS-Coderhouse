@@ -38,6 +38,7 @@ const CartProvider = ({children}) => {
     // ]
 
     const [cart, setCart] = useState([])
+    const [cantidad, setCantidad] = useState(0)
 
     const clearCart = () => {
 
@@ -45,10 +46,17 @@ const CartProvider = ({children}) => {
 
     }
 
+    const getQuantity = () => {
+        let quantity = 0
+        cart.map(e => quantity += e.cantidad)
+        setCantidad(quantity)
+        console.log(`Quantity es: ${quantity}`)
+        console.log(`Cantidad es: ${cantidad}`)
+    }
+
     //? Esta función se llama cuando se presiona el bonton Agregar Carrito
     const addToCart = (producto, cantidad) => {
 
-        console.log('Se ejecuta la función addToCart')
         if (isInCart(producto.id)) { //Verifico si el producto existe en el carrito.
             const newCart = [...cart] //Hago copia del carrito con spread operator.
             for( const elemento of newCart) { //Busco cual producto del carrito coincide con el producto que estoy agregando.
@@ -82,13 +90,8 @@ const CartProvider = ({children}) => {
     const removeItemInCart = (id) => {
 
         if (isInCart(id)) { //Verifico si el producto existe en el carrito.
-            const newCart = [...cart] //Hago copia del carrito con spread operator.
-            for( const [i,elemento] of newCart) { //Busco cual producto del carrito coincide con el producto que estoy agregando.
-                if (elemento.producto.id === id) {
-                    newCart.splice(i,1) //Cuando lo encontramos, le sumamos la cantidad
-                    break
-                }
-            }
+            const newCart = [...cart]
+            newCart.map((e,i) => e.producto.id === id && newCart.splice(i,1))
             setCart(newCart)
         }
 
@@ -98,7 +101,9 @@ const CartProvider = ({children}) => {
         cart,
         clearCart,
         addToCart,
-        removeItemInCart
+        removeItemInCart,
+        getQuantity,
+        cantidad
     }
 
     return(
