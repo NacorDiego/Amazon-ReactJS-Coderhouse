@@ -1,7 +1,8 @@
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useContext } from "react";
-import ItemInCart from "../components/ItemInCart";
+import ItemListInCart from "../components/ItemListInCart";
+// import ItemInCart from "../components/ItemInCart";
 import CartContext from "../store/cart-context";
 
 
@@ -28,9 +29,7 @@ function CartContainer() {
                     </div>
                     <div className="grid grid-cols-12 gap-5 mt-10">
                         <div className="bg-white min-h-96 rounded-xl border-4 border-yellow col-span-9 p-10">
-                            { cart.map(e =>
-                                <ItemInCart key={e.producto.id} marca={e.producto.marca} modelo={e.producto.modelo} stock={e.producto.stock} img={e.producto.img} cantidad={e.cantidad} precio={e.producto.precio} id={e.producto.id} />
-                            )}
+                            <ItemListInCart />
                         </div>
                         <div className="col-span-3 flex flex-col gap-5">
                             <div className="bg-blue-900 rounded-xl border-2 border-yellow h-28"></div>

@@ -38,20 +38,11 @@ const CartProvider = ({children}) => {
     // ]
 
     const [cart, setCart] = useState([])
-    const [cantidad, setCantidad] = useState(0)
 
     const clearCart = () => {
 
         setCart([])
 
-    }
-
-    const getQuantity = () => {
-        let quantity = 0
-        cart.map(e => quantity += e.cantidad)
-        setCantidad(quantity)
-        console.log(`Quantity es: ${quantity}`)
-        console.log(`Cantidad es: ${cantidad}`)
     }
 
     //? Esta función se llama cuando se presiona el bonton Agregar Carrito
@@ -101,9 +92,7 @@ const CartProvider = ({children}) => {
         cart,
         clearCart,
         addToCart,
-        removeItemInCart,
-        getQuantity,
-        cantidad
+        removeItemInCart
     }
 
     return(

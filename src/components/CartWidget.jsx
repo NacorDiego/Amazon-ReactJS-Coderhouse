@@ -6,22 +6,21 @@ import CartContext from "../store/cart-context";
 
 function CartWidget() {
 
-    let { cantidad } = useContext(CartContext)
+    let { cart } = useContext(CartContext)
 
-    // const [ cantidad, setCantidad ] = useState(0)
 
-    // const getQuantity = () => {
-    //     let quantity = 0
-    //     cart.map(e => quantity += e.quantity)
-    //     setCantidad(quantity)
-    //     return cantidad
-    // }
+    const getQuantity = () => {
+        let quantity = 0
+        cart.map(e => quantity += e.cantidad)
+        console.log(typeof quantity)
+        return quantity
+    }
 
     return (
         <Link to="/cart">
             <button className="flex items-center" >
                 <FontAwesomeIcon className="text-2xl text-white hover:text-light-300 ease-linear duration-200" icon={faCartShopping} />
-                <span className="text-2xl text-white ml-2">{cantidad}</span>
+                <span className="text-2xl text-white ml-2">{getQuantity()}</span>
             </button>
         </Link>
     );
