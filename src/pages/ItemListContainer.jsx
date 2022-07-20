@@ -3,7 +3,7 @@ import ItemList from "../components/ItemList";
 import { useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
-import { getFirestore, doc, getDoc } from 'firebase/firestore'
+import { getFirestore, doc, getDoc, collection, getDocs } from 'firebase/firestore'
 
 
 
@@ -23,12 +23,20 @@ function ItemListContainer() {
 
         const db = getFirestore()
 
-        const productRef = doc( db, "products", "ANUjQ4121hHzrj2jt16p" )
+        /*const productRef = doc( db, "products", "ANUjQ4121hHzrj2jt16p" )
 
         getDoc(productRef).then((snapshot) => {
             if(snapshot.exists()){
                 setProductos({...snapshot.data()})
             }
+        })*/
+
+        const productsRef = collection( db, "products" )
+
+        getDocs(productsRef).then((snapshot) => {
+
+            setProductos(snapshot.docs.map((doc) => doc.data() ))
+
         })
 
     },[])
@@ -40,9 +48,8 @@ function ItemListContainer() {
                     <h1 className="text-5xl text-blue-900 font-medium">Catálogo de productos</h1>
                     <a className="text-2xl text-sky-100 font-medium hover:text-sky" href="/"><FontAwesomeIcon className="text-xl" icon={faPlus} /> Ver más</a>
                 </div>
-                {/* 1:14:00min video Firebase */}
                 {console.log(productos)}
-                {/* <ItemList productos={productos} /> */}
+                <ItemList productos={productos} />
             </div>
         </section>
     );
