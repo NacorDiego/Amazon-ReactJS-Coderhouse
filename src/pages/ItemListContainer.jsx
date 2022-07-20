@@ -3,7 +3,7 @@ import ItemList from "../components/ItemList";
 import { useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
-import { getFirestore, doc, getDoc, collection, getDocs } from 'firebase/firestore'
+import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore'
 
 
 
@@ -11,18 +11,9 @@ function ItemListContainer() {
     const [productos, setProductos] = useState([])
     const { catid } = useParams()
 
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //         fetch('/data/products.json')
-    //             .then(resp => resp.json())
-    //             .then(data => catid ? setProductos(data.filter((item) => item.categoria === catid)) : setProductos(data))
-    //     }, 1000)
-    // }, [catid])
-
     useEffect(() => {
 
-        const db = getFirestore()
-
+        //? Traigo un producto específico de la colección a travez del ID.
         /*const productRef = doc( db, "products", "ANUjQ4121hHzrj2jt16p" )
 
         getDoc(productRef).then((snapshot) => {
@@ -31,15 +22,39 @@ function ItemListContainer() {
             }
         })*/
 
-        const productsRef = collection( db, "products" )
+        /*//? Aplico filtro de precio con query
+        const productsRef = query(collection( db, "products" ), where("precio", "<", 500))*/
 
-        getDocs(productsRef).then((snapshot) => {
+        const db = getFirestore()
 
-            setProductos(snapshot.docs.map((doc) => doc.data() ))
+        if (catid){
+            if (catid === "indumentaria"){ 
+                //? Aplico filtro de categorías con query
+                const productsRef = query(collection( db, "products" ), where("categoria", "==", "indumentaria"))
+                getDocs(productsRef).then((snapshot) => {
 
-        })
+                    setProductos(snapshot.docs.map((doc) => doc.data() ))
 
-    },[])
+                })
+            } else {
+                const productsRef = query(collection( db, "products" ), where("categoria", "==", "electronica"))
+                getDocs(productsRef).then((snapshot) => {
+
+                    setProductos(snapshot.docs.map((doc) => doc.data() ))
+
+                })
+            }
+        } else {
+            //? Traigo todos los productos de la colección
+            const productsRef = collection( db, "products" )
+            getDocs(productsRef).then((snapshot) => {
+
+                setProductos(snapshot.docs.map((doc) => doc.data() ))
+
+            })
+        }
+
+    },[catid])
 
     return (
         <section className="bg-light-100 pt-32 min-h-screen pb-32">
