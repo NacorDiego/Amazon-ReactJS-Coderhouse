@@ -5,38 +5,6 @@ const CartContext = createContext()
 
 const CartProvider = ({children}) => {
 
-    // Funciones a definir: addToCart, removeFromCart, clearCart, isInCart
-
-    // const ejemploCarrito = [
-    //     {
-    //         producto: {
-    //             nombre: '',
-    //             precio: '',
-    //             img: ''
-    //             id: ''
-    //         },
-    //         cantidad: 5
-    //     },
-    //     {
-    //         producto: {
-    //             nombre: '',
-    //             precio: '',
-    //             img: ''
-    //             id: ''
-    //         },
-    //         cantidad: 5
-    //     },
-    //     {
-    //         producto: {
-    //             nombre: '',
-    //             precio: '',
-    //             img: ''
-    //             id: ''
-    //         },
-    //         cantidad: 5
-    //     }
-    // ]
-
     const [cart, setCart] = useState([])
 
     const clearCart = () => {
