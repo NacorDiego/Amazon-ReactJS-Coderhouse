@@ -5,6 +5,7 @@ import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from "react-router-dom";
 import ItemDetailLoader from "../components/ItemDetailLoader";
+import { getProduct } from "../services/firestore";
 function ItemDetailContainer() {
     const [producto, setProducto] = useState()
     const [loading, setLoading] = useState(true)
@@ -12,19 +13,19 @@ function ItemDetailContainer() {
 
     useEffect(() => {
 
-        setTimeout(() => {
-            fetch('/data/products.json')
-                .then(resp => resp.json())
-                .then(data => setProducto(data.find((item) => item.id === itemid)))
-                .catch(err => console.log(err))
-                setLoading(false)
-                console.log(producto)
-        }, 1000)
+        getProduct(itemid).then( data => {
+            setLoading(false)
+            setProducto(data)
+        })
+        .catch( errorMsg => {
+            console.error(errorMsg)
+        })
 
         return (
             setLoading(true)
         )
-    }, [itemid]);
+
+    }, [itemid])
 
     return (
         <div className="h-screen bg-light-100">
