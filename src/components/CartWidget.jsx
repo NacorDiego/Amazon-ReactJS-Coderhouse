@@ -17,12 +17,14 @@ function CartWidget() {
     }
 
     return (
-        <Link to="/cart">
-            <button className="flex items-center" >
-                <FontAwesomeIcon className="text-2xl text-white hover:text-light-300 ease-linear duration-200" icon={faCartShopping} />
-                <span className="text-2xl text-white ml-2">{getQuantity()}</span>
-            </button>
-        </Link>
+        <div className="w-14">
+            {cart.length !== 0 && <Link to="/cart">
+                <button className="flex items-center" >
+                    <FontAwesomeIcon className="text-2xl text-white hover:text-light-300 ease-linear duration-200" icon={faCartShopping} />
+                    <span className="text-2xl text-white ml-2">{getQuantity()}</span>
+                </button>
+            </Link>}
+        </div>
     );
 }
 
