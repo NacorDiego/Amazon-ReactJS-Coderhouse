@@ -5,6 +5,7 @@ import ItemDetailContainer from "./pages/ItemDetailContainer";
 import UserLoginContainer from "./pages/UserLoginContainer";
 import CartContainer from "./pages/CartContainer";
 import { CartProvider } from "./store/cart-context";
+import UserFormContainer from "./pages/UserFormContainer";
 
 // import AuthContext from "./store/auth-context";
 
@@ -21,6 +22,7 @@ function App() {
             <Route path="/item/:itemid" element={<ItemDetailContainer />} />
             <Route path="/user/login" element={<UserLoginContainer />} />
             <Route path="/cart" element={<CartContainer />} />
+            <Route path="/userForm" element={<UserFormContainer />} />
           </Routes>
 
         </BrowserRouter>
