@@ -34,7 +34,7 @@ export async function getAllProducts(){
             id: item.id
         }
 
-        console.log(product)
+        // console.log(product)
 
         return product
     })
@@ -64,7 +64,7 @@ export async function getAllProductsByCategory(idCategory){
             id: item.id
         }
 
-        console.log(product)
+        // console.log(product)
 
         return product
     })

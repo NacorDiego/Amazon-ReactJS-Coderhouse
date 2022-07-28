@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import BuyerForm from "../components/BuyerForm";
 
-function UserFormContainer() {
+function BuyerFormContainer() {
     return (
         <main className="bg-blue-900">
             <div className="container min-h-screen w-full flex pb-20">
@@ -25,4 +25,4 @@ function UserFormContainer() {
     );
 }
 
-export default UserFormContainer;
+export default BuyerFormContainer;

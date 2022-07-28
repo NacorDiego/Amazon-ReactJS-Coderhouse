@@ -19,6 +19,8 @@ function CartContainer() {
         return total
     }
 
+    const getCartProps = () => cart.map(prod => console.log(prod))
+
     return (
         <main className="bg-blue-900">
             <div className="container min-h-screen w-full flex pb-20">
@@ -39,7 +41,7 @@ function CartContainer() {
                             {cart.length === 0 ? <CartEmpty /> : <ItemListInCart />}
                         </div>
                         <div className="col-span-3 flex flex-col gap-5">
-                            <div className="bg-blue-900 h-60 rounded-xl border-2 border-yellow flex items-center">
+                            <div className="bg-blue-900 h-72 rounded-xl border-2 border-yellow flex items-center">
                                 <div className="w-full h-4/6 flex flex-col justify-center items-center gap-5">
                                     <div className="w-full flex justify-between items-center px-5">
                                         <span className="text-xl text-white font-medium">Subtotal</span>
@@ -56,9 +58,9 @@ function CartContainer() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="bg-blue-900 rounded-xl border-1 border-yellow h-28">
-                                <Link to="/userForm">
-                                    <button className="w-3/6 h-12 bg-yellow rounded-xl text-white text-xl font-medium hover:bg-yellow-500 ease-linear duration-150">Confirmar compra</button>
+                            <div className="bg-blue-900 rounded-xl border-1 border-yellow flex items-end">
+                                <Link to="/buyerForm" className="w-full flex justify-center items-center">
+                                    <button className="w-full bg-sky-100 rounded-xl text-white text-xl font-medium hover:bg-sky ease-linear duration-150 py-4" onClick={getCartProps}>Confirmar compra</button>
                                 </Link>
                             </div>
                         </div>
