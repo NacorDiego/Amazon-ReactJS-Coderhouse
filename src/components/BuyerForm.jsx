@@ -35,6 +35,10 @@ function BuyerForm() {
 
         order.buyer = buyer
 
+        let fecha = new Date()
+
+        order.date = fecha.toLocaleString()
+
         console.log(order)
 
         setOrder(order)

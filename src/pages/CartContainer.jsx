@@ -28,7 +28,8 @@ function CartContainer() {
                 id: prod.producto.id,
                 marca: prod.producto.marca,
                 modelo: prod.producto.modelo,
-                precio: prod.producto.precio
+                precio: prod.producto.precio,
+                cantidad: prod.cantidad
             }
             items.push(producto)
         })
