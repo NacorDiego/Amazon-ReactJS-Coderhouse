@@ -3,6 +3,8 @@ import { faUser, faPhone, faAt } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { useContext } from "react";
 import OrderContext from "../store/order-context";
+import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 function BuyerForm() {
 
@@ -24,23 +26,25 @@ function BuyerForm() {
         setNewEmail(event.target.value)
     }
 
+    const showAlert = () => {
+        Swal.fire({
+            title:'Compra finalizada',
+            text:`${newName} su compra será procesada a la brevedad.`,
+            icon:'success'
+        })
+    }
+
     const submitHandler = (event) => {
         event.preventDefault()
-
         const buyer = {
             name: newName,
             phone: newPhone,
             email: newEmail
         }
-
         order.buyer = buyer
-
         let fecha = new Date()
-
         order.date = fecha.toLocaleString()
-
         console.log(order)
-
         setOrder(order)
     }
 
@@ -54,22 +58,24 @@ function BuyerForm() {
                             <label htmlFor="buyerName" className="p-3">
                                 <FontAwesomeIcon className="text-2xl text-yellow" icon={faUser} />
                             </label>
-                            <input className="w-full h-full rounded-xl p-5 text-xl font-light outline-none" id="buyerName" type="text" placeholder="Ingrese su nombre y apellido" onChange={nameHandler} />
+                            <input className="w-full h-full rounded-xl p-5 text-xl font-light outline-none" id="buyerName" type="text" placeholder="Ingrese su nombre y apellido" onChange={nameHandler} required />
                         </div>
                         <div className="w-5/6 h-12 bg-white rounded-xl flex items-center">
                             <label htmlFor="buyerPhone" className="p-3">
                                 <FontAwesomeIcon className="text-2xl text-yellow" icon={faPhone} />
                             </label>
-                            <input className="w-full h-full rounded-xl p-5 text-xl font-light outline-none" id="buyerPhone" type="number" placeholder="Ingrese su teléfono" onChange={phoneHandler} />
+                            <input className="w-full h-full rounded-xl p-5 text-xl font-light outline-none" id="buyerPhone" type="number" placeholder="Ingrese su teléfono" onChange={phoneHandler} required />
                         </div>
                         <div className="w-5/6 h-12 bg-white rounded-xl flex items-center">
                             <label htmlFor="buyerEmail" className="p-3">
                                 <FontAwesomeIcon className="text-2xl text-yellow" icon={faAt} />
                             </label>
-                            <input className="w-full h-full rounded-xl p-5 text-xl font-light outline-none" id="buyerEmail" type="email" placeholder="Ingrese su correo electrónico" onChange={emailHandler} />
+                            <input className="w-full h-full rounded-xl p-5 text-xl font-light outline-none" id="buyerEmail" type="email" placeholder="Ingrese su correo electrónico" onChange={emailHandler} required />
                         </div>
                         <div className="w-5/6 h-12 flex justify-center items-center">
-                            <button className="w-3/6 h-12 bg-yellow rounded-xl text-white text-xl font-medium hover:bg-yellow-500 ease-linear duration-150" type="submit">Finalizar compra</button>
+                            <Link to="/" className="w-3/6 h-12 bg-yellow rounded-xl text-white text-xl font-medium hover:bg-yellow-500 ease-linear duration-150 flex justify-center items-center">
+                                <button type="submit" onClick={showAlert}>Finalizar compra</button>
+                            </Link>
                         </div>
                     </form>
                 </div>
