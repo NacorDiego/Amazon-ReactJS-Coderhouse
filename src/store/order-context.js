@@ -4,7 +4,12 @@ const OrderContext = createContext()
 
 const OrderProvider = ({children}) => {
 
-    const [ order, setOrder ] = useState({})
+    const [ order, setOrder ] = useState({
+        buyer: {},
+        items: [],
+        date: "",
+        total: 0
+    })
 
     const data = {
         order,

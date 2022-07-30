@@ -2,31 +2,42 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faPhone, faAt } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { useContext } from "react";
+import OrderContext from "../store/order-context";
 
 function BuyerForm() {
 
-    const { setOrder } = useContext(OrderContext)
+    const { order, setOrder } = useContext(OrderContext)
 
-    const [ name, setName ] = useState("")
-    const [ phone, setPhone ] = useState("")
-    const [ email, setEmail ] = useState("")
+    const [ newName, setNewName ] = useState("")
+    const [ newPhone, setNewPhone ] = useState("")
+    const [ newEmail, setNewEmail ] = useState("")
 
     const nameHandler = (event) => {
-        setName(event.target.value)
+        setNewName(event.target.value)
     }
 
     const phoneHandler = (event) => {
-        setPhone(event.target.value)
+        setNewPhone(event.target.value)
     }
 
     const emailHandler = (event) => {
-        setEmail(event.target.value)
+        setNewEmail(event.target.value)
     }
 
     const submitHandler = (event) => {
         event.preventDefault()
 
-        // const 
+        const buyer = {
+            name: newName,
+            phone: newPhone,
+            email: newEmail
+        }
+
+        order.buyer = buyer
+
+        console.log(order)
+
+        setOrder(order)
     }
 
     return (

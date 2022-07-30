@@ -12,6 +12,7 @@ import UserFormContainer from "./pages/BuyerFormContainer";
 
 function App() {
   return (
+      <OrderProvider>
       <CartProvider>
         <BrowserRouter >
 
@@ -22,14 +23,13 @@ function App() {
             <Route path="/category/:catid" element={<ItemListContainer />} />
             <Route path="/item/:itemid" element={<ItemDetailContainer />} />
             <Route path="/user/login" element={<UserLoginContainer />} />
-            <OrderProvider>
-              <Route path="/cart" element={<CartContainer />} />
-              <Route path="/buyerForm" element={<UserFormContainer />} />
-            </OrderProvider>
+            <Route path="/cart" element={<CartContainer />} />
+            <Route path="/buyerForm" element={<UserFormContainer />} />
           </Routes>
 
         </BrowserRouter>
       </CartProvider>
+      </OrderProvider>
   );
 }
 

@@ -5,11 +5,13 @@ import CartEmpty from "../components/CartEmpty";
 import ItemListInCart from "../components/ItemListInCart";
 import CartContext from "../store/cart-context";
 import { Link } from "react-router-dom";
+import OrderContext from "../store/order-context";
 
 
 function CartContainer() {
 
     const { cart, clearCart } = useContext(CartContext)
+    const { order, setOrder } = useContext(OrderContext)
 
     const getTotal = () => {
         let total = 0;
@@ -19,7 +21,22 @@ function CartContainer() {
         return total
     }
 
-    const getCartProps = () => cart.map(prod => console.log(prod))
+    const getCartProps = () => {
+        const items = []
+        cart.map(prod => {
+            const producto = {
+                id: prod.producto.id,
+                marca: prod.producto.marca,
+                modelo: prod.producto.modelo,
+                precio: prod.producto.precio
+            }
+            items.push(producto)
+        })
+        order.items = items
+        order.total = getTotal()
+        console.log(order)
+        setOrder(order)
+    }
 
     return (
         <main className="bg-blue-900">
