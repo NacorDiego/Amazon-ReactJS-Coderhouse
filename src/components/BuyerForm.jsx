@@ -5,7 +5,7 @@ import { useContext } from "react";
 import OrderContext from "../store/order-context";
 import Swal from "sweetalert2";
 // import { Link } from "react-router-dom";
-import { pushOrder } from "../services/firestore";
+import { pushOrder, updateStock } from "../services/firestore";
 import { useNavigate } from "react-router-dom";
 import CartContext from "../store/cart-context";
 
@@ -36,7 +36,6 @@ function BuyerForm() {
         Swal.fire({
             title:'Compra finalizada',
             text:`${newName} su compra #${id} será procesada a la brevedad.`,
-            /* Para devolver el id, se encuentra en el doc.id de la colección. Pero primero tengo que subirlo a la misma. */
             icon:'success'
         })
     }
@@ -53,6 +52,9 @@ function BuyerForm() {
         order.date = fecha.toLocaleString()
         setOrder(order)
         await pushOrder(order,showAlert)
+        order.items.map(e => {
+           updateStock(e.id, e.cantidad)
+        })
         clearCart()
         navigate("/",true)
     }

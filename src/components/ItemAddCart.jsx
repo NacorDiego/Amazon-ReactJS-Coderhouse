@@ -3,7 +3,7 @@ import ButtonAddToCart from "./ButtonAddToCart";
 import ItemCount from "./ItemCount";
 import { useContext, useState } from "react";
 import CartContext from "../store/cart-context";
-function ItemAddCart({ producto, stock }) {
+function ItemAddCart({ producto, stock, id }) {
 
     const { addToCart } = useContext(CartContext)
 
@@ -35,7 +35,7 @@ function ItemAddCart({ producto, stock }) {
             </div>
             ) : (
             <div className="w-full flex justify-between items-end px-5 mt-5">
-                <ItemCount num={num} sumar={sumar} restar={restar} stock={stock} />
+                <ItemCount num={num} sumar={sumar} restar={restar} stockInicial={stock} id={id} />
                 <ButtonAddToCart num={num} onAdd={onAdd} />
             </div>
             )}
