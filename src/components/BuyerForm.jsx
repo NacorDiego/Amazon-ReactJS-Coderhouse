@@ -4,7 +4,8 @@ import { useState } from "react";
 import { useContext } from "react";
 import OrderContext from "../store/order-context";
 import Swal from "sweetalert2";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { pushOrder } from "../services/firestore";
 
 function BuyerForm() {
 
@@ -26,10 +27,11 @@ function BuyerForm() {
         setNewEmail(event.target.value)
     }
 
-    const showAlert = () => {
+    const showAlert = (id) => {
         Swal.fire({
             title:'Compra finalizada',
-            text:`${newName} su compra será procesada a la brevedad.`,
+            text:`${newName} su compra #${id} será procesada a la brevedad.`,
+            /* Para devolver el id, se encuentra en el doc.id de la colección. Pero primero tengo que subirlo a la misma. */
             icon:'success'
         })
     }
@@ -44,8 +46,8 @@ function BuyerForm() {
         order.buyer = buyer
         let fecha = new Date()
         order.date = fecha.toLocaleString()
-        console.log(order)
         setOrder(order)
+        pushOrder(order,showAlert)
     }
 
     return (
@@ -73,9 +75,10 @@ function BuyerForm() {
                             <input className="w-full h-full rounded-xl p-5 text-xl font-light outline-none" id="buyerEmail" type="email" placeholder="Ingrese su correo electrónico" onChange={emailHandler} required />
                         </div>
                         <div className="w-5/6 h-12 flex justify-center items-center">
-                            <Link to="/" className="w-3/6 h-12 bg-yellow rounded-xl text-white text-xl font-medium hover:bg-yellow-500 ease-linear duration-150 flex justify-center items-center">
-                                <button type="submit" onClick={showAlert}>Finalizar compra</button>
-                            </Link>
+                            {/* <Link to="/" className="w-3/6 h-12 bg-yellow rounded-xl text-white text-xl font-medium hover:bg-yellow-500 ease-linear duration-150 flex justify-center items-center">
+                                <button type="submit">Finalizar compra</button>
+                            </Link> */}
+                            <button type="submit">Finalizar compra</button>
                         </div>
                     </form>
                 </div>

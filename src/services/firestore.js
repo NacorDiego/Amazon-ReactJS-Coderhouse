@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app"
-import { getFirestore, collection, getDocs, doc, getDoc, query, where } from "firebase/firestore"
+import { getFirestore, collection, getDocs, doc, getDoc, query, where, addDoc } from "firebase/firestore"
 
 const firebaseConfig = {
   apiKey: "AIzaSyCBBJcGcSGWLFMRWEP9mZA93-kgXhKJ0hE",
@@ -80,6 +80,13 @@ export async function getProduct(id){
     const docSnapshot = await getDoc(docRef)
 
     return docSnapshot.data()
+}
+
+export async function pushOrder (order, showAlert) {
+    const ordersCollection = collection(db, "orders")
+    addDoc(ordersCollection, order).then(({id}) => {
+        showAlert(id)
+    })
 }
 
 export default db
