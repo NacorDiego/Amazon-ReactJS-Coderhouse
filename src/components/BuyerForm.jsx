@@ -6,14 +6,19 @@ import OrderContext from "../store/order-context";
 import Swal from "sweetalert2";
 // import { Link } from "react-router-dom";
 import { pushOrder } from "../services/firestore";
+import { useNavigate } from "react-router-dom";
+import CartContext from "../store/cart-context";
 
 function BuyerForm() {
 
     const { order, setOrder } = useContext(OrderContext)
+    const { clearCart } = useContext(CartContext)
 
     const [ newName, setNewName ] = useState("")
     const [ newPhone, setNewPhone ] = useState("")
     const [ newEmail, setNewEmail ] = useState("")
+
+    const navigate = useNavigate()
 
     const nameHandler = (event) => {
         setNewName(event.target.value)
@@ -36,7 +41,7 @@ function BuyerForm() {
         })
     }
 
-    const submitHandler = (event) => {
+    async function submitHandler (event) {
         event.preventDefault()
         const buyer = {
             name: newName,
@@ -47,7 +52,9 @@ function BuyerForm() {
         let fecha = new Date()
         order.date = fecha.toLocaleString()
         setOrder(order)
-        pushOrder(order,showAlert)
+        await pushOrder(order,showAlert)
+        clearCart()
+        navigate("/",true)
     }
 
     return (
@@ -75,10 +82,7 @@ function BuyerForm() {
                             <input className="w-full h-full rounded-xl p-5 text-xl font-light outline-none" id="buyerEmail" type="email" placeholder="Ingrese su correo electrónico" onChange={emailHandler} required />
                         </div>
                         <div className="w-5/6 h-12 flex justify-center items-center">
-                            {/* <Link to="/" className="w-3/6 h-12 bg-yellow rounded-xl text-white text-xl font-medium hover:bg-yellow-500 ease-linear duration-150 flex justify-center items-center">
-                                <button type="submit">Finalizar compra</button>
-                            </Link> */}
-                            <button type="submit">Finalizar compra</button>
+                            <button type="submit" className="w-3/6 h-12 bg-sky-100 rounded-xl text-white text-xl font-medium hover:bg-sky ease-linear duration-150">Finalizar compra</button>
                         </div>
                     </form>
                 </div>
