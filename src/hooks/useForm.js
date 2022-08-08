@@ -6,6 +6,14 @@ export const useForm = (initialForm, validateForm) => {
     const [loading, setLoading] = useState(false)
     const [response, setResponse] = useState(null)
 
+    // const showAlert = (id) => {
+    //     Swal.fire({
+    //         title:'Compra finalizada',
+    //         text:`${form.name} su compra #${id} será procesada a la brevedad.`,
+    //         icon:'success'
+    //     })
+    // }
+
     const handleChange = (e) => {
         const { name, value } = e.target
 
@@ -20,7 +28,15 @@ export const useForm = (initialForm, validateForm) => {
         setErrors(validateForm(form))
     }
 
-    const handleSubmit = (e) => {}
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        setErrors(validateForm(form))
+
+        if (Object.keys(errors).length === 0) {
+            alert("enviando form")
+            setLoading(true)
+        }
+    }
 
     return {
         form,
