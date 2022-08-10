@@ -82,10 +82,11 @@ export async function getProduct(id){
     return docSnapshot.data()
 }
 
-export async function pushOrder (order, showAlert) {
+export function pushOrder (order, showAlert) {
     const ordersCollection = collection(db, "orders")
-    addDoc(ordersCollection, order).then(({id}) => {
-        showAlert(id)
+    addDoc(ordersCollection, order)
+    .then(({id}) => {
+        (id !== 0) && showAlert(id)
     })
 }
 

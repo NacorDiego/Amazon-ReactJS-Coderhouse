@@ -1,13 +1,11 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faPhone, faAt } from "@fortawesome/free-solid-svg-icons";
 // import { useState } from "react";
-// import { useContext } from "react";
-// import OrderContext from "../store/order-context";
-// import Swal from "sweetalert2";
 // import { Link } from "react-router-dom";
+// import CartContext from "../store/cart-context";
+// import Swal from "sweetalert2";
 // import { pushOrder, updateStock } from "../services/firestore";
 // import { useNavigate } from "react-router-dom";
-// import CartContext from "../store/cart-context";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser, faPhone, faAt } from "@fortawesome/free-solid-svg-icons";
 import { useForm } from "../hooks/useForm";
 
 const initialForm = {

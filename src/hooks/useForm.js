@@ -1,4 +1,11 @@
 import { useState } from "react"
+import Swal from "sweetalert2";
+import { pushOrder, updateStock } from "../services/firestore";
+import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import OrderContext from "../store/order-context";
+import CartContext from "../store/cart-context";
+
 
 export const useForm = (initialForm, validateForm) => {
     const [form, setForm] = useState(initialForm)
@@ -6,13 +13,20 @@ export const useForm = (initialForm, validateForm) => {
     const [loading, setLoading] = useState(false)
     const [response, setResponse] = useState(null)
 
-    // const showAlert = (id) => {
-    //     Swal.fire({
-    //         title:'Compra finalizada',
-    //         text:`${form.name} su compra #${id} será procesada a la brevedad.`,
-    //         icon:'success'
-    //     })
-    // }
+    const { order, setOrder } = useContext(OrderContext)
+    const { clearCart } = useContext(CartContext)
+
+
+    const navigate = useNavigate()
+
+
+    const showAlert = (id) => {
+        Swal.fire({
+            title:'Compra finalizada',
+            text:`${form.name} su compra Nº ${id} será procesada a la brevedad.`,
+            icon:'success'
+        })
+    }
 
     const handleChange = (e) => {
         const { name, value } = e.target
@@ -28,13 +42,27 @@ export const useForm = (initialForm, validateForm) => {
         setErrors(validateForm(form))
     }
 
-    const handleSubmit = (e) => {
+    function handleSubmit (e){
         e.preventDefault()
         setErrors(validateForm(form))
 
         if (Object.keys(errors).length === 0) {
-            alert("enviando form")
+            const buyer = {
+                name: form.name,
+                phone: form.phone,
+                email: form.email
+            }
+            order.buyer = buyer
+            let fecha = new Date()
+            order.date = fecha.toLocaleString()
+            setOrder(order)
+            pushOrder(order,showAlert)
+            order.items.map(e => {
+                updateStock(e.id, e.cantidad)
+            })
             setLoading(true)
+            clearCart()
+            navigate("/",true)
         }
     }
 
