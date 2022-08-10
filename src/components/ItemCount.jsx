@@ -1,20 +1,4 @@
-// import { useEffect, useState } from "react";
-// import { getProduct } from "../services/firestore";
-
 function ItemCount({ num, sumar, restar, stockInicial, id }) {
-
-    // let stockActual = stock - num;
-    // const [stock, setStock] = useState(stockInicial)
-
-    // async function getStock(){
-    //     await getProduct(id).then((product) => console.log(product))
-    // }
-
-    // useEffect(() => {
-
-    //     console.log(getStock)
-
-    // }, [])
 
     return (
         <div className="flex flex-col items-start gap-1">

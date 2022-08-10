@@ -2,7 +2,6 @@ import { useContext } from "react";
 import CartContext from "../store/cart-context";
 import ItemInCart from "./ItemInCart";
 
-
 function ItemListInCart() {
 
     const { cart } = useContext(CartContext)

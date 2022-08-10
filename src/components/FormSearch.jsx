@@ -1,6 +1,3 @@
-
-
-
 function FormSearch() {
     return (
         <div className="grow flex justify-center">

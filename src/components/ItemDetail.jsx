@@ -19,7 +19,7 @@ function ItemDetail({ producto }) {
                     <p className="mt-10 text-xl text-blue-900 opacity-80 px-5">{producto.descripcion}</p>
                 </div>
                 <div>
-                    <ItemAddCart producto={producto} stock={4} />
+                    <ItemAddCart producto={producto} stock={producto.stock} />
                 </div>
             </div>
         </>

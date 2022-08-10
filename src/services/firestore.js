@@ -19,13 +19,8 @@ export async function getAllProducts(){
     // Referencia a la colección
     const productsCollectionRef = collection(db, "products")
 
-    //? async await
     // Leemos el snapshot de los documentos actuales con getDocs
     const docSnapshot = await getDocs(productsCollectionRef)
-
-    /*//? promise.then
-    let docSnapshot2
-    getDocs(productsCollectionRef).then((respuesta) => docSnapshot2 = respuesta)*/
 
     // Recibimos un array dentro de ese snapshot
     const dataProducts = docSnapshot.docs.map(item => {
@@ -33,8 +28,6 @@ export async function getAllProducts(){
             ...item.data(),
             id: item.id
         }
-
-        // console.log(product)
 
         return product
     })
@@ -49,13 +42,8 @@ export async function getAllProductsByCategory(idCategory){
 
     const q = query(productsCollectionRef, where( "categoria", "==", idCategory ))
 
-    //? async await
     // Leemos el snapshot de los documentos actuales con getDocs
     const docSnapshot = await getDocs(q)
-
-    /*//? promise.then
-    let docSnapshot2
-    getDocs(productsCollectionRef).then((respuesta) => docSnapshot2 = respuesta)*/
 
     // Recibimos un array dentro de ese snapshot
     const dataProducts = docSnapshot.docs.map(item => {
@@ -63,8 +51,6 @@ export async function getAllProductsByCategory(idCategory){
             ...item.data(),
             id: item.id
         }
-
-        // console.log(product)
 
         return product
     })

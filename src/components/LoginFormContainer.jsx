@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import LoginForm from "./LoginForm";
 
-
 function LoginFormContainer() {
     return (
         <div className="w-1/2 h-full bg-blue-900 rounded-r-3xl flex flex-col items-center justify-between p-5">

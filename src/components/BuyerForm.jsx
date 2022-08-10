@@ -1,9 +1,3 @@
-// import { useState } from "react";
-// import { Link } from "react-router-dom";
-// import CartContext from "../store/cart-context";
-// import Swal from "sweetalert2";
-// import { pushOrder, updateStock } from "../services/firestore";
-// import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faPhone, faAt } from "@fortawesome/free-solid-svg-icons";
 import { useForm } from "../hooks/useForm";
@@ -42,54 +36,6 @@ const validationsForm = (form) => {
 }
 
 function BuyerForm() {
-
-    // const { order, setOrder } = useContext(OrderContext)
-    // const { clearCart } = useContext(CartContext)
-
-    // const [ newName, setNewName ] = useState("")
-    // const [ newPhone, setNewPhone ] = useState("")
-    // const [ newEmail, setNewEmail ] = useState("")
-
-    // const navigate = useNavigate()
-
-    // const nameHandler = (event) => {
-    //     setNewName(event.target.value)
-    // }
-
-    // const phoneHandler = (event) => {
-    //     setNewPhone(event.target.value)
-    // }
-
-    // const emailHandler = (event) => {
-    //     setNewEmail(event.target.value)
-    // }
-
-    // const showAlert = (id) => {
-    //     Swal.fire({
-    //         title:'Compra finalizada',
-    //         text:`${newName} su compra #${id} será procesada a la brevedad.`,
-    //         icon:'success'
-    //     })
-    // }
-
-    // async function submitHandler (event) {
-    //     event.preventDefault()
-    //     const buyer = {
-    //         name: newName,
-    //         phone: newPhone,
-    //         email: newEmail
-    //     }
-    //     order.buyer = buyer
-    //     let fecha = new Date()
-    //     order.date = fecha.toLocaleString()
-    //     setOrder(order)
-    //     await pushOrder(order,showAlert)
-    //     order.items.map(e => {
-    //        updateStock(e.id, e.cantidad)
-    //     })
-    //     clearCart()
-    //     navigate("/",true)
-    // }
 
     const {
         form,

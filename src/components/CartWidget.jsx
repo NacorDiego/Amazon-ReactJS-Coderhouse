@@ -8,7 +8,6 @@ function CartWidget() {
 
     let { cart } = useContext(CartContext)
 
-
     const getQuantity = () => {
         let quantity = 0
         cart.map(e => quantity += e.cantidad)

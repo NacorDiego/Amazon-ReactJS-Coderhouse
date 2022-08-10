@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-function ItemText({ id, detail, setDetail, marca, stock, precio, modelo }) {
+function ItemText({ id, marca, precio, modelo }) {
 
     return (
         <div className="w-full flex flex-col justify-center items-center gap-3">
